@@ -5,16 +5,17 @@ package cbedoy.conversor;
  */
 public class ConversionModel
 {
-    private float value;
+    //POJO'S CONVERSION MODEL
+    private double value;
     private String fromTitle;
     private String toTitle;
     private String finishTitle;
 
-    public float getValue() {
+    public double getValue() {
         return value;
     }
 
-    public void setValue(float value) {
+    public void setValue(double value) {
         this.value = value;
     }
 

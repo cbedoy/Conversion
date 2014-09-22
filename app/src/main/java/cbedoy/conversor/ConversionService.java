@@ -5,6 +5,7 @@ package cbedoy.conversor;
  */
 public class ConversionService
 {
+    //SINGLETON CLASS FOR MAKE CONVERCIONS
     public static ConversionService instance;
 
     public static ConversionService getInstance(){
@@ -14,18 +15,10 @@ public class ConversionService
         return instance;
     }
 
+
     public String calculateConversionWithData(double value, double factor, String title){
         return (value * factor) + title;
     }
 
-    public enum ConversionKey{
-        KM_TO_MILLAS(48.8f),
-        A_TO_Y(50.0f),
-        B_TO_X(50.0f),
-        C_TO_Z(50.0f);
 
-        ConversionKey(double value) {
-
-        }
-    }
 }

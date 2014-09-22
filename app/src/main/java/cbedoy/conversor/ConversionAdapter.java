@@ -17,7 +17,6 @@ public class ConversionAdapter extends ArrayAdapter<ConversionModel>
 {
     private List<ConversionModel> conversionModelList;
 
-
     public ConversionAdapter(Context context, int resource, List<ConversionModel> objects) {
         super(context, resource, objects);
         conversionModelList = objects;
@@ -25,6 +24,7 @@ public class ConversionAdapter extends ArrayAdapter<ConversionModel>
 
     @Override
     public int getCount() {
+        //CALCULATE NUMBER OF ROWS ON SPINNER
         return conversionModelList.size();
     }
 
@@ -35,6 +35,7 @@ public class ConversionAdapter extends ArrayAdapter<ConversionModel>
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        //REUSE VIEW
         if(convertView == null)
         {
             convertView = new MyView(getContext());
@@ -44,6 +45,7 @@ public class ConversionAdapter extends ArrayAdapter<ConversionModel>
         return convertView;
     }
 
+    //LITTLE VIEW OF CELL
     private class MyView extends LinearLayout{
 
         private ConversionModel conversionModel;
