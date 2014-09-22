@@ -55,6 +55,7 @@ public class ConversionAdapter extends ArrayAdapter<ConversionModel>
             textView = new TextView(getContext());
             textView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
             textView.setTextSize(20);
+            addView(textView);
         }
         public void setConversionModel(ConversionModel conversionModel) {
             this.conversionModel = conversionModel;
